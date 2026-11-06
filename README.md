@@ -8,7 +8,7 @@ Min Chalutong's personal website. It's built with plain **HTML + CSS + a little 
 
 ```
 min-chalutong.github.io/
-├── index.html      ← Home page (photo, intro, education, work)
+├── index.html      ← Home page (hero, about, news, education, experience)
 ├── talks.html      ← Talks page (conference presentations)
 ├── css/
 │   └── style.css   ← ALL the design (fonts, colours, spacing, mobile layout)
@@ -40,14 +40,16 @@ Tip: In VS Code, install the **Live Server** extension. Right-click `index.html`
 
 ---
 
-## 3. Publish it with GitHub Pages (free)
+## 3. Publish it at https://minchalut6.github.io
 
-1. On GitHub, open the repository → **Settings** → **Pages**.
-2. Under *Build and deployment*, set **Source = Deploy from a branch**, **Branch = `main`**, folder **`/ (root)`** → **Save**.
-3. Wait about 1 minute. Your site will be live at
-   `https://minchalut6.github.io/min-chalutong.github.io/`
+GitHub gives every account **one** short address, `https://<username>.github.io`. You get it by naming the repository exactly after your username:
 
-> If you want the shorter address `https://minchalut6.github.io/`, rename the repository to exactly **`minchalut6.github.io`** (it must match your GitHub username).
+1. On GitHub, open this repository → **Settings** → **General**.
+2. Under *Repository name*, rename it to **`minchalut6.github.io`** → **Rename**.
+3. Go to **Settings → Pages**. Set *Source* = **Deploy from a branch**, *Branch* = **`main`**, folder = **`/ (root)`** → **Save**.
+4. After about a minute, the site is live at **https://minchalut6.github.io**.
+
+All links in the site are *relative* (for example `href="talks.html"`), so nothing in the code has to change when you rename. The `<link rel="canonical" ...>` line in each page already points to the new address.
 
 After that, every time you push a change to `main`, the site updates automatically.
 
@@ -55,40 +57,43 @@ After that, every time you push a change to `main`, the site updates automatical
 
 ## 4. Common edits (copy and paste recipes)
 
-### Add a new job or degree
-In `index.html`, find the `EDUCATION` or `WORK EXPERIENCES` section, copy one whole `<li> ... </li>` block, paste it at the top of the list, and change the text:
-
+### Add news (Home page, `News` section)
+Newest at the top:
 ```html
 <li>
-  <strong>Job Title, Organisation</strong>
-  <p>City, Country.</p>
-  <p>Jan, 2027 - Present.</p>
+  <span class="news-date">Dec 2026</span>
+  <span>Presented at <strong>APIEMS 2026</strong> in Busan, Korea.</span>
 </li>
 ```
 
-### Add a new talk
-In `talks.html`, copy one `<li>` inside `CONFERENCE PRESENTATIONS`:
-
+### Add a job or degree (Home page, `Education` / `Experience`)
 ```html
-<li>
-  Author, A. &amp; <strong>Chalutong, M.</strong> (2027).
-  Title of the paper.
-  <em>Conference Name (ABBR 2027)</em>, Dates, City, Country.
+<li class="timeline-item">
+  <p class="timeline-date">Jan 2027 &ndash; Present</p>
+  <h3>Job Title</h3>
+  <p class="timeline-place">Organisation &middot; City, Country</p>
 </li>
 ```
-Note: write `&` as `&amp;` in HTML.
+`&ndash;` = –, `&middot;` = ·, `&amp;` = &. These are HTML "entities" for special characters.
+
+### Add a research interest
+Add a line inside `<ul class="chips">`: `<li>Multi-objective Optimization</li>`
+
+### Add a talk (`talks.html`)
+Copy a whole `<li class="card"> ... </li>` block and change the text. Change the badge
+`<span class="badge">Accepted</span>` to `Presented` after the conference.
 
 ### Add your CV
-Save your CV as `files/cv.pdf` and push. The "My current CV" link already points there.
+Save it as `files/cv.pdf`. The "CV" menu link and "Download CV" button already point there.
 
 ### Fix the LinkedIn / YouTube / supervisor links
-Search `index.html` for `YOUR-LINKEDIN-ID`, `YOUR-CHANNEL` and `href="#"`, and replace them with the real URLs.
+Search `index.html` for `YOUR-LINKEDIN-ID`, `YOUR-CHANNEL` and `href="#"`, and replace them with the real addresses.
 
 ### Change the photo
-Replace `images/profile.jpg` with a new photo that has the same name, or change `src="images/profile.jpg"` in `index.html`.
+Replace `images/profile.jpg` with a new photo that has the same name. Upload the original file straight from your phone; don't run it through apps that compress it. If its size differs from 1200×1600, update `width="..." height="..."` on the `<img>` tag.
 
 ### Change colours or fonts
-Open `css/style.css`. The **variables** at the top (`--accent-color`, `--heading-font`, …) control the whole site. Change one value and every page updates.
+At the top of `css/style.css` are the variables: `--navy` (dark blue), `--light-blue`, `--pale-blue`, and so on. Change one value and every page updates.
 
 ---
 
