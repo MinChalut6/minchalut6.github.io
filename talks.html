@@ -1,0 +1,77 @@
+<!DOCTYPE html>
+<!--
+  talks.html — the TALKS page.
+  The <head>, <header> and <footer> are the same as index.html.
+  Only the content inside <main> is different.
+-->
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Talks — Min Chalutong</title>
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Open+Sans:ital,wght@0,400;0,700;1,400&family=Oswald:wght@400;500&display=swap" rel="stylesheet">
+  <link rel="stylesheet" href="css/style.css">
+</head>
+
+<body>
+
+  <header class="site-header">
+    <div class="header-inner">
+      <a class="site-title" href="index.html">MIN CHALUTONG</a>
+      <button class="menu-toggle" aria-label="Open menu" aria-expanded="false">&#9776;</button>
+      <nav class="site-nav">
+        <ul>
+          <li><a href="index.html">Home</a></li>
+          <!-- On THIS page, "Talks" is the active one -->
+          <li><a href="talks.html" class="active">Talks</a></li>
+        </ul>
+      </nav>
+    </div>
+  </header>
+
+  <main class="container">
+    <h1 class="page-title">TALKS</h1>
+
+    <section>
+      <h2>CONFERENCE PRESENTATIONS</h2>
+
+      <!-- Each talk is one <li>. Newest at the top.
+           <strong> = bold (your name), <em> = italic (conference name). -->
+      <ul class="citation-list">
+        <li>
+          Liang, Y.-C. &amp; <strong>Chalutong, M.</strong> (2026).
+          Multi-Objective Discrete Virus Optimization for Hyperparameter Optimization in CNN Architecture Search.
+          <em>The 26th Asia Pacific Industrial Engineering &amp; Management System Conference (APIEMS 2026)</em>,
+          November 29 - December 2, Busan, Korea. (Accepted)
+        </li>
+        <li>
+          Liang, Y.-C., Thao, P.D., <strong>Chalutong, M.</strong>, &amp; Dang, V.G. (2026).
+          A Data-Driven Optimization Framework for Academic Course Scheduling and Graduation Planning.
+          <em>The Chinese Institute of Industrial Engineers Annual Conference (CIIE 2026)</em>,
+          November 13 - 14, Hsinchu, Taiwan. (Accepted)
+        </li>
+      </ul>
+    </section>
+
+    <!-- Later you could add another section, e.g.:
+    <section>
+      <h2>INVITED TALKS</h2>
+      <ul class="citation-list">
+        <li>...</li>
+      </ul>
+    </section>
+    -->
+  </main>
+
+  <footer class="site-footer">
+    <div class="container">
+      <p>Min Chalutong<br>
+         Email: <a href="mailto:minchalut@gmail.com">minchalut@gmail.com</a></p>
+    </div>
+  </footer>
+
+  <script src="js/main.js"></script>
+</body>
+</html>
