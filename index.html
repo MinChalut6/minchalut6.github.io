@@ -1,12 +1,165 @@
 <!DOCTYPE html>
+<!--
+  ============================================================
+  index.html  —  the HOME page of your website.
+  GitHub Pages automatically shows "index.html" when someone
+  visits https://minchalut6.github.io/min-chalutong.github.io/
+  (or your custom domain).
+
+  HOW HTML WORKS (quick reminder):
+    <tag> content </tag>   → an "element"
+    <tag attribute="value"> → extra info about the element
+    a "comment" like this whole block is ignored by the browser
+    (it starts with less-than, !, two dashes and ends with two dashes, greater-than)
+  ============================================================
+-->
 <html lang="en">
 <head>
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>My Web Profile</title>
+  <!-- Everything in <head> is information ABOUT the page (not shown on screen). -->
+  <meta charset="UTF-8">
+  <!-- This line makes the site look right on phones. Always keep it. -->
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Min Chalutong</title>
+  <meta name="description" content="Min Chalutong — Master's student in Industrial Engineering and Management at Yuan Ze University.">
+
+  <!-- Google Fonts: "Oswald" for headings, "Open Sans" for body text (same look as your prototype). -->
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Open+Sans:ital,wght@0,400;0,700;1,400&family=Oswald:wght@400;500&display=swap" rel="stylesheet">
+
+  <!-- Our own stylesheet. ALL pages share this one file, so the design stays consistent. -->
+  <link rel="stylesheet" href="css/style.css">
 </head>
+
 <body>
-    <h1>Hello, I'm [Your Name]</h1>
-    <p>Welcome to my personal profile site!</p>
+
+  <!-- ===================== HEADER / NAVIGATION =====================
+       This same block is copied onto every page.
+       To add a new page: create the .html file, then add one <li> here
+       (and on every other page). -->
+  <header class="site-header">
+    <div class="header-inner">
+      <a class="site-title" href="index.html">MIN CHALUTONG</a>
+
+      <!-- The "hamburger" button only appears on small screens (see style.css). -->
+      <button class="menu-toggle" aria-label="Open menu" aria-expanded="false">&#9776;</button>
+
+      <nav class="site-nav">
+        <ul>
+          <!-- class="active" greys out the link of the page you are on -->
+          <li><a href="index.html" class="active">Home</a></li>
+          <li><a href="talks.html">Talks</a></li>
+          <!-- Example for later:
+          <li><a href="publications.html">Publications</a></li>
+          -->
+        </ul>
+      </nav>
+    </div>
+  </header>
+
+  <main class="container">
+
+    <!-- ===================== HERO PHOTO ===================== -->
+    <!-- "alt" text describes the image for screen readers and if the image fails to load. -->
+    <img class="hero-image" src="images/profile.jpg"
+         alt="Min Chalutong in traditional Thai dress at Green Pier, with Wat Arun in the background">
+
+    <!-- ===================== INTRO ===================== -->
+    <section class="intro">
+      <h1 class="name">MIN CHALUTONG</h1>
+
+      <p>I'm currently studying for a Master's degree in Industrial Engineering and Management at Yuan Ze University.</p>
+
+      <p>My current research focuses on CNN architecture search and Optimization using Metaheuristic methods.</p>
+
+      <p>
+        You could reach me at
+        <a href="mailto:minchalut@gmail.com">minchalut@gmail.com</a>,
+        <a href="mailto:s1145456@mail.yzu.edu.tw">s1145456@mail.yzu.edu.tw</a>
+      </p>
+
+      <!-- Put your CV file at files/cv.pdf and this link will work.
+           target="_blank" opens it in a new tab. -->
+      <p><a href="files/cv.pdf" target="_blank" rel="noopener">My current CV</a></p>
+
+      <!-- Social icons. Replace the "#" with your real profile URLs. -->
+      <div class="social-links">
+        <a href="https://www.linkedin.com/in/YOUR-LINKEDIN-ID" target="_blank" rel="noopener" aria-label="LinkedIn">
+          <!-- SVG = an icon drawn with code, so no image file is needed -->
+          <svg viewBox="0 0 24 24" width="32" height="32" aria-hidden="true">
+            <rect width="24" height="24" rx="4" fill="#0A66C2"/>
+            <path fill="#fff" d="M7.1 9.5h-2.6V18h2.6V9.5zM5.8 5.5a1.5 1.5 0 1 0 0 3 1.5 1.5 0 0 0 0-3zM18.5 13.3c0-2.3-.5-4-3.2-4-1.3 0-2.1.7-2.5 1.3V9.5h-2.5V18h2.6v-4.2c0-1.1.2-2.2 1.6-2.2 1.4 0 1.4 1.3 1.4 2.3V18h2.6v-4.7z"/>
+          </svg>
+        </a>
+        <a href="https://www.youtube.com/@YOUR-CHANNEL" target="_blank" rel="noopener" aria-label="YouTube">
+          <svg viewBox="0 0 24 24" width="32" height="32" aria-hidden="true">
+            <rect y="3" width="24" height="18" rx="5" fill="#FF0000"/>
+            <path fill="#fff" d="M10 8.5v7l6-3.5z"/>
+          </svg>
+        </a>
+      </div>
+    </section>
+
+    <!-- ===================== RESEARCH INTERESTS ===================== -->
+    <section>
+      <h2>RESEARCH INTERESTS</h2>
+      <p>Operations Research, Combinatorial Optimization, Metaheuristic, Deep Learning</p>
+    </section>
+
+    <!-- ===================== EDUCATION =====================
+         Each degree is one <li>. To add another, copy a whole
+         <li> ... </li> block and change the text. -->
+    <section>
+      <h2>EDUCATION</h2>
+      <ul class="entry-list">
+        <li>
+          <strong>MSc. in Industrial Engineering and Management.</strong>
+          <p>Yuan Ze University, Taiwan.</p>
+          <p>Sep, 2025 - Jun, 2027 (expected).</p>
+          <p>Supervisor: <a href="#" target="_blank" rel="noopener">Yun-Chia Liang</a>. Ph.D., Professor.</p>
+          <p>Thesis: Multi-Objective Discrete Virus Optimization for Hyperparameter Optimization in CNN Architecture Search (In progress).</p>
+        </li>
+        <li>
+          <strong>BEd. in Mathematics Education. (First-class Honours)</strong>
+          <p>Khon Kaen University, Thailand.</p>
+          <p>Jul, 2020 - Feb, 2024.</p>
+        </li>
+      </ul>
+    </section>
+
+    <!-- ===================== WORK EXPERIENCES ===================== -->
+    <section>
+      <h2>WORK EXPERIENCES</h2>
+      <ul class="entry-list">
+        <li>
+          <strong>Teaching Assistant, Yuan Ze University</strong>
+          <p>Taoyuan, Taiwan.</p>
+          <p>Sep, 2026 - Jun, 2027.</p>
+        </li>
+        <li>
+          <strong>Project Manager, Outreach Center of Yuan Ze University in Thailand</strong>
+          <p>Bangkok, Thailand.</p>
+          <p>Sep, 2024 - Aug, 2025.</p>
+        </li>
+        <li>
+          <strong>Research Intern, The Hong Kong Polytechnic University</strong>
+          <p>Kowloon, Hong Kong.</p>
+          <p>Jun, 2024 - Aug, 2024.</p>
+        </li>
+      </ul>
+    </section>
+
+  </main>
+
+  <!-- ===================== FOOTER (same on every page) ===================== -->
+  <footer class="site-footer">
+    <div class="container">
+      <p>Min Chalutong<br>
+         Email: <a href="mailto:minchalut@gmail.com">minchalut@gmail.com</a></p>
+    </div>
+  </footer>
+
+  <!-- JavaScript goes at the end so the page shows first, then the script runs. -->
+  <script src="js/main.js"></script>
 </body>
 </html>
