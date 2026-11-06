@@ -1,17 +1,18 @@
 <!DOCTYPE html>
 <!--
   talks.html — the TALKS page.
-  The <head>, <header> and <footer> are the same as index.html.
-  Only the content inside <main> is different.
+  Header and footer are the same as index.html; only <main> changes.
 -->
 <html lang="en">
 <head>
   <meta charset="UTF-8">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
   <title>Talks — Min Chalutong</title>
+  <meta name="description" content="Conference presentations by Min Chalutong.">
+  <link rel="canonical" href="https://minchalut6.github.io/talks.html">
   <link rel="preconnect" href="https://fonts.googleapis.com">
   <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-  <link href="https://fonts.googleapis.com/css2?family=Open+Sans:ital,wght@0,400;0,700;1,400&family=Oswald:wght@400;500&display=swap" rel="stylesheet">
+  <link href="https://fonts.googleapis.com/css2?family=Inter:ital,wght@0,400;0,500;0,600;1,400&family=Poppins:wght@500;600;700&display=swap" rel="stylesheet">
   <link rel="stylesheet" href="css/style.css">
 </head>
 
@@ -19,56 +20,59 @@
 
   <header class="site-header">
     <div class="header-inner">
-      <a class="site-title" href="index.html">MIN CHALUTONG</a>
+      <a class="site-title" href="index.html">Min Chalutong</a>
       <button class="menu-toggle" aria-label="Open menu" aria-expanded="false">&#9776;</button>
       <nav class="site-nav">
         <ul>
           <li><a href="index.html">Home</a></li>
-          <!-- On THIS page, "Talks" is the active one -->
           <li><a href="talks.html" class="active">Talks</a></li>
+          <li><a href="files/cv.pdf" target="_blank" rel="noopener">CV</a></li>
         </ul>
       </nav>
     </div>
   </header>
 
+  <!-- Small dark-blue banner at the top of inner pages -->
+  <section class="page-banner">
+    <div class="container">
+      <h1>Talks</h1>
+      <p>Conference presentations</p>
+    </div>
+  </section>
+
   <main class="container">
-    <h1 class="page-title">TALKS</h1>
+    <section class="section">
+      <h2>Conference Presentations</h2>
 
-    <section>
-      <h2>CONFERENCE PRESENTATIONS</h2>
-
-      <!-- Each talk is one <li>. Newest at the top.
-           <strong> = bold (your name), <em> = italic (conference name). -->
-      <ul class="citation-list">
-        <li>
-          Liang, Y.-C. &amp; <strong>Chalutong, M.</strong> (2026).
-          Multi-Objective Discrete Virus Optimization for Hyperparameter Optimization in CNN Architecture Search.
-          <em>The 26th Asia Pacific Industrial Engineering &amp; Management System Conference (APIEMS 2026)</em>,
-          November 29 - December 2, Busan, Korea. (Accepted)
+      <!-- Each talk is one <li class="card">. Newest at the top.
+           Copy a whole <li> ... </li> block to add a talk. -->
+      <ul class="card-list">
+        <li class="card">
+          <div class="card-meta">
+            <span class="badge">Accepted</span>
+            <span>Nov 29 &ndash; Dec 2, 2026 &middot; Busan, Korea</span>
+          </div>
+          <h3>Multi-Objective Discrete Virus Optimization for Hyperparameter Optimization in CNN Architecture Search</h3>
+          <p class="authors">Liang, Y.-C. &amp; <strong>Chalutong, M.</strong> (2026)</p>
+          <p class="venue">The 26th Asia Pacific Industrial Engineering &amp; Management System Conference (APIEMS 2026)</p>
         </li>
-        <li>
-          Liang, Y.-C., Thao, P.D., <strong>Chalutong, M.</strong>, &amp; Dang, V.G. (2026).
-          A Data-Driven Optimization Framework for Academic Course Scheduling and Graduation Planning.
-          <em>The Chinese Institute of Industrial Engineers Annual Conference (CIIE 2026)</em>,
-          November 13 - 14, Hsinchu, Taiwan. (Accepted)
+        <li class="card">
+          <div class="card-meta">
+            <span class="badge">Accepted</span>
+            <span>Nov 13 &ndash; 14, 2026 &middot; Hsinchu, Taiwan</span>
+          </div>
+          <h3>A Data-Driven Optimization Framework for Academic Course Scheduling and Graduation Planning</h3>
+          <p class="authors">Liang, Y.-C., Thao, P.D., <strong>Chalutong, M.</strong>, &amp; Dang, V.G. (2026)</p>
+          <p class="venue">The Chinese Institute of Industrial Engineers Annual Conference (CIIE 2026)</p>
         </li>
       </ul>
     </section>
-
-    <!-- Later you could add another section, e.g.:
-    <section>
-      <h2>INVITED TALKS</h2>
-      <ul class="citation-list">
-        <li>...</li>
-      </ul>
-    </section>
-    -->
   </main>
 
   <footer class="site-footer">
-    <div class="container">
-      <p>Min Chalutong<br>
-         Email: <a href="mailto:minchalut@gmail.com">minchalut@gmail.com</a></p>
+    <div class="footer-inner">
+      <p>&copy; 2026 Min Chalutong</p>
+      <p><a href="mailto:minchalut@gmail.com">minchalut@gmail.com</a></p>
     </div>
   </footer>
 
