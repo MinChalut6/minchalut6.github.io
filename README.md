@@ -17,7 +17,7 @@ min-chalutong.github.io/
 ├── images/
 │   └── profile.jpg ← Your photo
 └── files/
-    └── cv.pdf      ← Put your CV here (you need to add this file)
+    └── (optional files, e.g. slides PDFs)
 ```
 
 The three languages each do one job:
@@ -84,7 +84,7 @@ Copy a whole `<li class="card"> ... </li>` block and change the text. Change the
 `<span class="badge">Accepted</span>` to `Presented` after the conference.
 
 ### Add your CV
-Save it as `files/cv.pdf`. The "CV" menu link and "Download CV" button already point there.
+Your CV is on Google Drive. To update it, replace the file in Drive (keep the same link), or paste a new link in place of the `drive.google.com/...` address in `index.html` (2 places) and `talks.html` (1 place).
 
 ### Fix the LinkedIn / YouTube / supervisor links
 Search `index.html` for `YOUR-LINKEDIN-ID`, `YOUR-CHANNEL` and `href="#"`, and replace them with the real addresses.
