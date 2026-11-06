@@ -40,7 +40,13 @@ body {
   line-height: 1.7;
   color: var(--text);
   background: var(--page-bg);
+  /* keeps the footer at the bottom even on short pages */
+  min-height: 100vh;
+  display: flex;
+  flex-direction: column;
 }
+
+body > main { flex: 1; width: 100%; }
 
 a { color: var(--blue); text-decoration: none; }
 a:hover { text-decoration: underline; }
@@ -338,29 +344,31 @@ img { max-width: 100%; }
   padding: 0;
   margin: 0;
   display: grid;
-  gap: 20px;
+  gap: 12px;                         /* space between talks */
 }
 
+/* Compact talk card: small padding and fonts so many talks fit on screen */
 .card {
   background: var(--card-bg);
   border: 1px solid var(--border);
-  border-left: 5px solid var(--light-blue);
-  border-radius: var(--radius);
-  padding: 22px 24px;
-  box-shadow: 0 2px 8px rgba(11, 37, 69, 0.05);
+  border-left: 4px solid var(--light-blue);
+  border-radius: 10px;
+  padding: 12px 18px;
+  font-size: 15px;
+  line-height: 1.55;
 }
 
 .card-meta {
   display: flex;
   flex-wrap: wrap;
   align-items: center;
-  gap: 10px;
-  font-size: 14px;
+  gap: 8px;
+  font-size: 13px;
   color: var(--text-muted);
 }
 
-.card h3 { margin: 10px 0 8px; font-size: 19px; }
-.card p  { margin: 2px 0; }
+.card h3 { margin: 4px 0 2px; font-size: 16px; line-height: 1.4; }
+.card p  { margin: 0; }
 .card .venue { font-style: italic; color: var(--text-muted); }
 
 
