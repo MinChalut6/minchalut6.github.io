@@ -1,0 +1,6 @@
+# robots.txt — tells search engines they may read every page,
+# and where the list of pages (sitemap) is.
+User-agent: *
+Allow: /
+
+Sitemap: https://minchalut6.github.io/sitemap.xml
