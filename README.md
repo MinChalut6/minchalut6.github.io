@@ -126,3 +126,21 @@ Or, on github.com, open a file → click the ✏️ pencil → edit → **Commit
 - HTML & CSS basics: <https://developer.mozilla.org/en-US/docs/Learn>
 - Flexbox (used for the menu): <https://css-tricks.com/snippets/css/a-guide-to-flexbox/>
 - Right-click any element in your browser → **Inspect** to see and try out its HTML/CSS live.
+
+---
+
+## 8. Show up on Google when someone searches "Min Chalutong"
+
+The site already includes `robots.txt`, `sitemap.xml`, a page description, and "structured data" in `index.html` that tells Google the page is about the person Min Chalutong. To get Google to find it:
+
+1. Make sure the site is live at **https://minchalut6.github.io** (section 3).
+2. Open **[Google Search Console](https://search.google.com/search-console)** and sign in.
+3. Click **Add property** → choose **URL prefix** → enter `https://minchalut6.github.io/`.
+4. Verify that you own the site. Choose the **HTML tag** method and copy only the code inside `content="..."`. In `index.html`, find the `google-site-verification` comment, paste your code, remove the comment markers around that line, and push. Then click **Verify**.
+5. In Search Console go to **Sitemaps** → enter `sitemap.xml` → **Submit**.
+6. Go to **URL inspection** → paste `https://minchalut6.github.io/` → **Request indexing**.
+
+Google usually lists a new site within a few days to two weeks. Things that help it rank for your name:
+- Put the link to your site on LinkedIn (Contact info → Website), YouTube (About), GitHub profile, Google Scholar, ORCID, and your email signature. Links from other sites are what Google trusts most.
+- Keep your full name in the page title and headings (already done).
+- When you add a page, add it to `sitemap.xml` too.
